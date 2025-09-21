@@ -9,11 +9,11 @@ import { Log } from './entities/Log';
 
 const dataSource = new DataSource({
   type: 'mysql',
-  host: process.env.DB_HOST || 'localhost',
-  port: parseInt(process.env.DB_PORT || '3306'),
-  username: process.env.DB_USER || 'root',
-  password: process.env.DB_PASS || 'example',
-  database: process.env.DB_NAME || 'data_pusher',
+  host: 'localhost',
+  port: parseInt('3306'),
+  username:  'root',
+  password: 'Welcome123$',
+  database: 'user_db',
   synchronize: false,
   logging: false,
   entities: [User, Role, Account, Destination, AccountMember, Log],
@@ -21,10 +21,10 @@ const dataSource = new DataSource({
   cache: {
     type: 'redis',
     options: {
-      host: process.env.REDIS_HOST || '127.0.0.1',
-      port: parseInt(process.env.REDIS_PORT || '6379')
+      host:  '127.0.0.1',
+      port: parseInt( '6379')
     },
-    duration: parseInt(process.env.CACHE_TTL_SECONDS || '60') * 1000
+    duration: parseInt('60') * 1000
   }
 });
 

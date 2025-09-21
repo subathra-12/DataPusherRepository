@@ -5,9 +5,9 @@ services:
     restart: always
     environment:
      MYSQL_ROOT_PASSWORD: rootpassword
-     MYSQL_DATABASE: my_app_db
+     MYSQL_DATABASE: user_db
      MYSQL_USER: myuser
-     MYSQL_PASSWORD: Project123$
+     MYSQL_PASSWORD: Welcome123$
     ports:
       - "3306:3306"
 
@@ -19,8 +19,8 @@ services:
     environment:
       DB_HOST: mysql
       DB_USER: myuser
-      DB_PASSWORD: Project123$
-      DB_NAME: my_app_db
+      DB_PASSWORD: Welcome123$
+      DB_NAME: user_db
       JWT_SECRET: supersecretkey
       JWT_EXPIRES_IN: 1h
     ports:
